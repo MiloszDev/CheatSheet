@@ -1,7 +1,6 @@
-// src/components/Navbar.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "./css/Navbar.css"; // Make sure your styling is applied
+import "./css/Navbar.css";
 
 const Navbar = () => {
   return (
@@ -10,15 +9,15 @@ const Navbar = () => {
         <li>
           <Link to="/">Cheat Sheets List</Link>
         </li>{" "}
-        {/* Landing Page (Cheat Sheets List) */}
+        {}
         <li>
           <Link to="/upload">Upload Cheat Sheet</Link>
         </li>{" "}
-        {/* Uploading CheatSheet Page */}
+        {}
         <li>
           <Link to="/chatbot">Chatbot</Link>
         </li>{" "}
-        {/* Chatbot Page */}
+        {}
       </ul>
     </nav>
   );

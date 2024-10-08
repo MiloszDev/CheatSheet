@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
@@ -12,14 +11,12 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Navbar /> {/* Navbar will be rendered on every page */}
+        <Navbar /> {}
         <Routes>
-          <Route path="/" element={<LandingPage />} /> {/* Cheat Sheets List */}
-          <Route path="/upload" element={<UploadingCheatSheet />} />{" "}
-          {/* Upload Cheat Sheet */}
-          <Route path="/chatbot" element={<Chatbot />} /> {/* Chatbot Page */}
-          <Route path="/cheatsheet/:id" element={<CheatSheetDetail />} />{" "}
-          {/* Cheat Sheet Details */}
+          <Route path="/" element={<LandingPage />} /> {}
+          <Route path="/upload" element={<UploadingCheatSheet />} /> {}
+          <Route path="/chatbot" element={<Chatbot />} /> {}
+          <Route path="/cheatsheet/:id" element={<CheatSheetDetail />} /> {}
         </Routes>
       </div>
     </Router>

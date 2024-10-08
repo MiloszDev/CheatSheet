@@ -14,11 +14,11 @@ const CheatSheetDetail = () => {
         const response = await axios.get(
           `http://localhost:5000/api/cheatsheets/${id}`
         );
-        console.log(response.data); // Log the response for debugging
+        console.log(response.data);
         setCheatSheet(response.data);
         setLoading(false);
       } catch (err) {
-        console.error(err); // Log any error for debugging
+        console.error(err);
         setError("Failed to load cheat sheet");
         setLoading(false);
       }
@@ -37,7 +37,7 @@ const CheatSheetDetail = () => {
   return (
     <div className="cheat-sheet-detail">
       <h1>{cheatSheet.title}</h1>
-      <pre>{cheatSheet.content}</pre> {/* Display the cheat sheet content */}
+      <pre>{cheatSheet.content}</pre> {}
     </div>
   );
 };

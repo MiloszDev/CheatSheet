@@ -1,16 +1,12 @@
-/* src/App.css */
-
-/* Global settings */
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f8f8f8; /* Light gray to contrast with vibrant colors */
+  background-color: #f8f8f8;
   margin: 0;
   padding: 0;
 }
 
-/* Navbar styles */
 .navbar {
-  background-color: #ff6f61; /* Light Red */
+  background-color: #ff6f61;
   padding: 15px;
 }
 
@@ -27,7 +23,7 @@ body {
 }
 
 .navbar ul li a {
-  color: #ffd700; /* Yellow */
+  color: #ffd700;
   text-decoration: none;
   font-size: 18px;
   padding: 10px 15px;
@@ -36,11 +32,10 @@ body {
 }
 
 .navbar ul li a:hover {
-  background-color: #ffd700; /* Yellow on hover */
-  color: #ff6f61; /* Light Red text on hover */
+  background-color: #ffd700;
+  color: #ff6f61;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -55,10 +50,9 @@ body {
 .container {
   padding: 20px;
   text-align: center;
-  animation: fadeIn 1.5s ease-in-out; /* Slower fade-in */
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Cheat Sheet List styling */
 .cheat-sheets-list {
   list-style-type: none;
   padding: 0;
@@ -71,22 +65,21 @@ body {
 
 .cheat-sheets-list a {
   display: inline-block;
-  background-color: #ff6f61; /* Light Red */
-  color: #ffd700; /* Yellow */
+  background-color: #ff6f61;
+  color: #ffd700;
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  transition: background-color 0.4s ease, transform 0.4s ease; /* Slower transitions */
+  transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
 .cheat-sheets-list a:hover {
-  background-color: #ffd700; /* Yellow on hover */
-  color: #ff6f61; /* Light Red text on hover */
-  transform: scale(1.05); /* Slight scale for a smoother effect */
+  background-color: #ffd700;
+  color: #ff6f61;
+  transform: scale(1.05);
 }
 
-/* Upload Form styling */
 .upload-form h1 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -120,16 +113,15 @@ body {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.4s ease, transform 0.4s ease; /* Smooth, chill animation */
+  transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
 .upload-form button:hover {
   background-color: #ffd700;
   color: #ff6f61;
-  transform: scale(1.05); /* Subtle scale effect */
+  transform: scale(1.05);
 }
 
-/* Cheat Sheet Detail page */
 .cheat-sheet-detail {
   background-color: #fff;
   padding: 30px;
@@ -137,7 +129,7 @@ body {
   max-width: 800px;
   margin: 30px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1.5s ease-in-out; /* Slower fade-in for chill effect */
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .cheat-sheet-detail h1 {

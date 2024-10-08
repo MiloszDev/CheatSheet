@@ -1,7 +1,6 @@
-// src/components/UploadingCheatSheet.jsx
 import React, { useState } from "react";
 import axios from "axios";
-// import "./UploadCheatSheet.css"; // Ensure you create this CSS file if needed
+import "./UploadCheatSheet.css";
 
 const UploadingCheatSheet = () => {
   const [title, setTitle] = useState("");
