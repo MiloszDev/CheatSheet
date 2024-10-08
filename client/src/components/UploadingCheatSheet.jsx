@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./UploadCheatSheet.css";
+import "./css/UploadCheatSheet.css";
 
 const UploadingCheatSheet = () => {
   const [title, setTitle] = useState("");
