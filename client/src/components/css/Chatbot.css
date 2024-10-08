@@ -1,0 +1,23 @@
+.chatbot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f9f9f9; /* Light background */
+}
+
+.chatbot-title {
+  font-size: 2rem; /* Larger font size */
+  color: lightcoral; /* Text color */
+  animation: fadeIn 1s ease-in; /* Animation for title */
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

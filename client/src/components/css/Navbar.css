@@ -1,0 +1,39 @@
+.navbar {
+  background-color: lightcoral; /* Navbar background color */
+  padding: 10px; /* Padding around the navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.navbar ul {
+  list-style: none; /* Remove bullet points from list */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar li {
+  margin: 0 15px; /* Spacing between list items */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Link text color */
+  font-weight: bold; /* Make link text bold */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  color: #ffd700; /* Change color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .navbar li {
+    margin: 10px 0; /* Space between stacked items */
+  }
+}

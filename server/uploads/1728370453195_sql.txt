@@ -1,0 +1,284 @@
+SELECT * FROM Customers; - wypisuje ci wszystkie bazy danych tego typu
+
+TEORIA
+SQL oznacza ustrukturyzowany język zapytań
+SQL umożliwia dostęp do baz danych i manipulowanie nimi
+
+Co można zrobić dzięki SQL'owi
+SQL może wykonywać zapytania do bazy danych
+SQL może pobierać dane z bazy danych
+SQL może wstawiać rekordy do bazy danych
+SQL może aktualizować rekordy w bazie danych
+SQL może usuwać rekordy z bazy danych
+SQL może tworzyć nowe bazy danych
+SQL może tworzyć nowe tabele w bazie danych
+SQL może tworzyć procedury składowane w bazie danych
+SQL może tworzyć widoki w bazie danych
+SQL może ustawiać uprawnienia do tabel, procedur i widoków
+
+
+SELECT * FROM Customers; - wypisuje ci wszystkie informacje na temat danaej rzeczy/osoby.Poniższa instrukcja SQL wybiera wszystkie kolumny z tabeli „Klienci”:
+
+SELECT CustomerName,City FROM Customers; - pokazuje wyłącznie tabele z CustomerName np. John i City np. Warszawa. Poniższa instrukcja SQL wybiera kolumny „CustomerName” i „City” z tabeli „Customers”:
+
+
+Instrukcja SELECT DISTINCT służy do zwracania tylko odrębnych (różnych) wartości.
+
+Wewnątrz tabeli kolumna często zawiera wiele zduplikowanych wartości; a czasami chcesz tylko wymienić różne (odrębne) wartości.
+SELECT DISTINCT Country, CustomerName FROM Customers; - wybierze kolumne Country i CustomerName z Tabeli "Customers"i wypisze tak żeby żadna kolumna się nie powtórzyła. np. Germany John
+
+
+
+Poniższa instrukcja SQL zawiera listę różnych (odrębnych) krajów klientów:
+SELECT COUNT(DISTINCT Country) FROM Customers; - wybierze wszystkie niepowtarzające się kraje i przeliczy je.
+
+SELECT * FROM Customers
+WHERE Country='Mexico'; - Poniższa instrukcja SQL wybiera wszystkich klientów z kraju „Meksyk” w tabeli „Klienci”:
+
+
+
+= równe
+> Większy niż
+< Mniej niż
+>= Większy lub równy
+<= Mniejsze lub równe
+<> Nie równe. Uwaga: W niektórych wersjach SQL ten operator może być zapisany jako !=
+MIĘDZY Między pewnym zakresem
+LIKE Wyszukaj wzór
+IN Aby określić wiele możliwych wartości dla kolumny
+
+
+SELECT * FROM Customers
+WHERE Country='Germany' AND City='Berlin'; - wyszukuje Z Klienta który mieszka w Niemczech w Berlinie
+
+SELECT * FROM Customers
+WHERE Country='Germany' AND (City='Berlin' OR City='München');
+
+SELECT * FROM Customers
+WHERE City='Berlin' OR City='München'; - wyszukuje z Klienta który mieszka albo w Berlinie albo w Munchen
+
+SELECT * FROM Customers
+WHERE NOT Country='Germany' AND NOT Country='USA'; - wyszukuje Klienta który nie mieszka ani w Niemczech ani w USA
+
+
+
+SELECT * FROM Customers
+ORDER BY Country, CustomerName; - Poniższa instrukcja SQL wybiera wszystkich klientów z tabeli „Klienci”, posortowanych według kolumny „Kraj”:
+
+SELECT * FROM Customers
+ORDER BY Country DESC;
+
+Poniższa instrukcja SQL wybiera wszystkich klientów z tabeli „Klienci”, posortowanych DESCENDING według kolumny „Kraj”:
+
+--to jest komentarz
+
+SELECT "a" < "B"; = 0
+
+SELECT 5 in(4, 5, 6, null) 
+-- 1 pokaze
+
+Typy liczbowe: int =, smallint, bigint, tinyint, float, real, decimal, numeric
+Typy czasu i daty = date, datetime
+Typy znakowe = char, varchar, nchar, nvarchar
+Typy specjalne = bit, text, image
+Typy binarne = binary, varbinary
+Typy waluty = money, smallmoney
+
+
+CREATE TABLE books(
+  id INT,
+  name VARCHAR(50),
+  price FLOAT,
+  pages INT,
+  releaseDate INT,
+  autorKsiazki VARCHAR(50)
+);
+
+INSERT INTO books VALUES
+  (1, 'Harry Potter', 49.99, 387, 2009, "JK Rowling"),
+  (2, 'Wojownicy', 37.59, 243, 2012, "Erin Hunter"),
+  (3, 'Wiedzmin', 46.33, 337, 2005, "Andrzej Sapkowski");
+
+SELECT * FROM books ORDER BY price ASC 
+
+
+AVG - average
+
+SELECT AVG(release_year) AS [year], (score-phrase) FROM dbo.ign GROUP BY score-phrase ORDER BY [year] DESC;
+
+
+orgName<>'' - jezeli jest nazwa pusta nazwa to nie zaliczac jej 
+2 = 2 => Prawda
+
+2 = 3 => Falsz
+
+2<>2 -> falsz
+
+2<>3 -> prawda
+
+<> - jezeli nie jest
+
+SELECT familyName FROM dbo.nobelPrizes WHERE familyName LIKE 'icz%'; - na poczatku icz
+SELECT familyName FROM dbo.nobelPrizes WHERE familyName LIKE '%icz'; - na koncu icz
+SELECT familyName FROM dbo.nobelPrizes WHERE familyName LIKE 'O%a'; - napoczątku O na końcu A
+
+SELECT familyName FROM dbo.nobelPrizes WHERE familyName LIKE 'O___a'; - 3 nieznane litery i na poczatku O na koncu A
+
+WHEN "Phisics" THEN "fizyka"
+THEN
+
+Wypisze dwie kolumny jedna Single druga Married
+USE AdventureWorks2022;
+SELECT MaritalStatus, COUNT(*) AS martialStatus 
+FROM HumanResources.Employee 
+WHERE Gender = 'F' 
+GROUP BY MaritalStatus;
+
+Dodalismy i kobiety i mezczyzn tworząc 4 kolumny
+USE AdventureWorks2022;
+SELECT MaritalStatus, COUNT(*) AS martialStatus 
+FROM HumanResources.Employee  
+GROUP BY MaritalStatus, Gender;
+
+
+SELECT YEAR(HireDate) AS HireDate, COUNT(*), Gender
+FROM HumanResources.Employee
+GROUP BY YEAR(HireDate), Gender
+ORDER BY COUNT(HireDate) DESC;
+
+INNER 
+INNER JOIN - wspolne elementy
+FULL OUTER - dodawanie zbiorów
+CROSS JOIN - wszystkie
+
+LEFT OUTER JOIN  - wszystkie elementy z lewej tabeli i czesc wspolna 2 tabeli
+RIGHT OUTER JOIN - wszystkie elementy z prawej tabelii i czesc wspolna 1 tabeli
+
+
+
+SELECT * FROM Uczniowie AS U
+JOIN Oceny AS O
+On U.Id = 0.Uczen_id
+
+Oblicz liczbę wierszy w tabeli [Produkcja].[Produkt]
+
+USE AdventureWorks2022;
+SELECT COUNT(*) AS NumberOfProducts
+FROM Production.Product;
+
+Oblicz liczbę wierszy w tabeli [Produkcja].[Produkt]
+
+USE AdventureWorks2022;
+SELECT COUNT(*) AS NumberOfProducts
+FROM Production.Product;
+
+Pokaż 5 pierwszych nazw i kolorów produktów, dla których zdefiniowany jest kolor
+
+USE AdventureWorks2022;
+SELECT TOP 5 Name, Color
+FROM Production.Product
+WHERE Color IS NOT NULL
+ORDER BY ProductID;
+
+Pokaż 5 najtańszych produktów (StandardCost) i ich koszt, zaokrąglij koszt do dwóch cyfr
+
+USE AdventureWorks2022;
+SELECT TOP 5 Name
+, ROUND(StandardCost,2) AS RoundedStandardCost
+FROM Production.Product
+WHERE StandardCost > 0.0
+ORDER BY StandardCost;
+
+Wydrukuj wszystkie dni tygodnia prezentowane w kolumnie SellStartDate
+
+USE AdventureWorks2022;
+SELECT DISTINCT FORMAT(SellStartDate, 'dddd') AS DayOfWeek
+FROM Production.Product;
+
+USE AdventureWorks2022;
+SELECT TOP 12 Name
+, CASE
+WHEN StandardCost < 100.0 THEN 'cheap'
+WHEN StandardCost < 200.0 THEN 'middle'
+WHEN StandardCost >= 200.0 THEN 'expensive'
+ELSE 'missing price'
+END AS PriceCategory
+FROM Production.Product
+WHERE Name LIKE '%mountain%';
+
+Pogrupuj wszystkie produkty według dnia tygodnia, w którym rozpoczęła się sprzedaż (SellStartDate). Dla
+każdej grupy oblicz liczbę produktów, koszt maksymalny i koszt średni.
+
+USE AdventureWorks2022;
+SELECT FORMAT(SellStartDate, 'dddd') AS DayOfWeek
+, COUNT(*) AS NumberOfProducts
+, MAX(StandardCost) AS MaxStandardPrice
+, AVG(StandardCost) AS AverageStandardPrice
+FROM Production.Product
+GROUP BY FORMAT(SellStartDate, 'dddd');
+
+Pogrupuj wszystkie produkty według liczby dni potrzebnych na wytworzenie (DaysToManufacture). Dla
+każdej grupy oblicz liczbę produktów oraz maksymalny koszt.
+
+SELECT DaysToManufacture
+, COUNT(*) AS NumberOfProducts
+, MAX(StandardCost) AS MaxStandardPrice
+FROM Production.Product
+GROUP BY DaysToManufacture
+HAVING COUNT(*) > 100;
+
+
+
+FORMATOWANIE
+
+# cokolwie
+
+
+SELECT
+RE.JobTitle,
+MIN(DATEDIFF(YEAR, RE.BirthDate, RE.HireDate)) AS MinHireAge,
+MAX(DATEDIFF(YEAR, RE.BirthDate, RE.HireDate)) AS MaxHireAge
+FROM HumanResources.Employee AS RE
+JOIN Person.person AS P ON RE.BusinessEntityID = P.BusinessEntityID
+GROUP BY RE.JobTitle;
+
+
+SELECT
+P.FirstName, 
+P.LastName,
+RE.JobTitle, 
+RE.BirthDate, 
+RE.HireDate,
+DATEDIFF(YEAR, RE.BirthDate, RE.HireDate) AS [WorkingYears]
+FROM HumanResources.Employee AS RE
+JOIN Person.person AS P ON RE.BusinessEntityID = P.BusinessEntityID;
+
+SELECT Name, ListPrice, ListPrice - (
+SELECT AVG(ListPrice)
+FROM Production.Product
+)
+FROM Production.Product;
+
+
+SELECT ProductID
+, Name
+, ProductNumber
+, Color
+, StandardCost
+, ListPrice
+FROM AdventureWorks2022.Production.Product
+WHERE ListPrice > (
+	SELECT AVG(ListPrice) AS [AveragePrice]
+	FROM Production.product
+)
+
+
+DDL
+
+CREATE - tworzy obiekt w bazie danych
+
+ALTER - modyifkuje obiekt w bazie danych
+
+DROP - usuwa obiekt z bazy danych
+
+TRUNCATE - czyści tabelę w bazie danych

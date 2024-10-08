@@ -1,0 +1,239 @@
+print(a, type(a)) - wyswietli wartosc a i typ a(int)
+
+napis = '''Milosz
+Zawolik
+27
+10
+2009''' - kilka lini wydrukuje
+
+napis = str(liczba) - konwertuje z liczby do napisu
+
+napis = Input() - po wpisaniu zawartosci napisany tekst sie zapisze w zmiennej 'napis'
+
+#przykladowy komentarz
+
+liczba = 5
+print(hex(liczba)) - konwertuje liczbe 5 do systemu szesnastkowego
+bin(liczba)
+
+napis = Input()
+liczba = int(napis, 36 - maksymalny system liczbowy)
+
+print(max/min(liczba1, liczba2))
+
+print(abs(liczba 1)) - liczba jezeli byla ujemna zrobi sie dodatnia
+
+zaokraglona liczba = round(liczba1, 2 - liczba miejsc po przecinku) - zaogralgla liczbe
+
+print(napis.upper/ccapitalize/lower())
+print(napis.replace('a', 'z')) - każdą literę a zamieni na z
+
+print(napis.startswith('Kuba')) - zaczyna sie z
+print(napis.endwith('Kuba')) - konczy sie z
+print(napis.endwith('Kuba')) - konczy sie z
+print(napis.isnumeric()) - czy są same numery
+
+len(napis) - ile znaków(razem ze spacją)
+print(napis.count('a')) - ile ten napis ma literek a
+
+print(napis.removeprefix())
+print(napis.removesuffix())
+
+print(str(liczba)) - konwertuje int do stringa
+
+print(f"{a}\t")
+
+true = 1
+false = 0
+
+print(not (a > 4 and a < 10))
+
+Prawa demorgana
+
+not(a or b) == (not a) and (not b)
+---------------------------------
+
+print(not (a > 4) or not (a < 10))
+
+print(4 < a > 10)
+
+typy danych
+ 
+list a = [1, 2, 3, 4]
+tuple
+set 
+dict
+
+a = []
+a.append()
+c.extend(a)
+c = a.copy()
+
+[123, 456, ['qwerty', True, False]] - dzialanie appenda
+[123, 456, 'qwerty', True, False] - dzialanie extenda
+
+a.remove(123)
+
+a.index(456)
+------------
+ a[2] = 'Kuba
+
+c = ["qwerty", True, False]
+
+-------------
+print(c*10)
+
+-------------
+a = [789]
+c = [123, 345]
+
+print(a is c)
+
+print(a<c)
+False
+
+
+lista_napisow = napis.split()
+
+lista_napisow = napis.split(sep='1') = jezeli do inputa wpiszemy 11111 to nic sie nie wyswietli
+
+liczba1, *rest = lista napisow
+
+print(*lista_napisow)
+12 34 56 78
+
+a.reverse() - nie tworzy listy tylko operuje na aktualnej
+c = list(reversed(a)) - stworzy liste z odwroconymi elementami
+
+**
+
+reversed(nazwaListy) - tworzy objekt z ktorego mozna zrobic liste
+
+b = a.copy() - tworzy liste z elementow z listy a
+
+print(a[-1]) - wyprintuje index ostatni
+
+print(a[2:5]) - od index 2 do index 5(z czego 5 sie nie zalicza tylko 4)
+
+print(a[:]) - wypisze wszystkie elementy
+
+print(a[2:-2:2]) - zwróci co drugi element
+print(a[::-1])
+
+print(a[-2:2:-1]) - 9,8,7,6,5,4
+
+a[3:5]= "Kuba"
+
+tuple - krotka
+b = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 7, 5) - krotka nie moze byc za bardzo sortowana
+a.sort() - sortowaine
+
+dict - słownik
+
+c={'kuba':'jest to imie meskie'}
+   klucz   wartość
+print(c[1]) - co jest pod kluczem 3
+
+print(type(b)==tuple)
+
+print('klucz2' in c)
+
+keys = c.keys() - pokazuje wszystkie klucze(jest caly czas na bieząco)
+values = c.values() - pokazuje wszystkie wartości(jest caly czas na bieżąco)
+items = c.items() - pokazuje (keys i value) w krotce i caly czas jest na bieżąco
+
+dictionary mozna skonwertowac do krotki
+
+sett przechowuje tylko różne od siebie wartości. W secie nie ma kolejności
+
+suma = s1 | s2 - doda s1 do s2
+suma = s1.union(s2) - to samo tylko ze lepsze
+
+
+roznica = s1 - s2 - odejmie elementy które są w zbiorze s1 i s2
+roznica = s1.difference(s2) - to samo co u góry
+
+
+czesc_wspolna = s1 & s2
+czesc_wspolna = s1.intersection(s2)
+
+s2.add(123456789)
+s2.add(input())
+
+s1 <= s2 - false/true
+
+s1.issuperset(s2) - czy jest nadzbiorem
+s1.issubset(s2) - czy jest podzbiorem
+
+s1.isdisjoint(s2) - czy element jest wspólny w  zbiorach
+
+def zpotęguj_a_do_potęgi_b(podstawa, wykładnik):
+    return podstawa**wykładnik
+
+
+a = 10
+b = 2
+
+print(zpotęguj_a_do_potęgi_b(wykładnik=a, podstawa=b))
+
+
+print(zpotęguj_a_do_potęgi_b(a,b))
+
+a = {'kliu':1, 'asdas':1231234}
+b = a.values()
+def suma(*args):
+    return sum(args)
+
+MAP
+a = ['1', '2', '3', '4']
+RAM - random acess memory
+
+from functools import reduce
+f(accumulator, element)
+
+
+w lambdzie nie mozna zrobic if, else, nie da sie tez robic zmiennych lokalnych np. suma = 1 + 2
+
+f string - print(f"{x} + 2 = {x + 2}")
+
+
+def sumator(akumulator, element):
+    suma = akumulator + element
+    print(f"wywołanie funkcji sumator ({akumulator}, {element}) -> {suma}")
+    return suma
+
+
+kolekcja = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(kolekcja)
+print(reduce(sumator, kolekcja))
+
+
+l1, l2 = map(int, input().split())
+
+if l1 < l2:
+    print("OK")
+else:
+    print("NOT OK")
+
+po kliknieciu F2 i zmienieniu nazwy zmiennej zmienią sie wszystkie zmienna dla wszystkich niezmienionych
+
+s = "Tak" if a > 30 else "Nie"
+
+zmienna = 6 ? a : c
+
+map(
+                float
+                if len(list(filter(lambda napis: "." in napis, liczby))) > 0
+                else int,
+                liczby,
+            )
+
+
+
+lista = [{"a": 10, "b": 20}, {"x": 1, "z": 2}, {"g": 12, "h": 123}]
+# jak posortować słowniki według sumy wartości
+# jak poso
+
+for element in sorted(lista, key=lambda slownik:sum(slownik.values())):
+    print(ele
