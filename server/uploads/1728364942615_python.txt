@@ -1,0 +1,88 @@
+95.160.117.101 - daniela adress ip 
+http://192.168.88.29 - ip davida
+
+python zadania cyberskiller
+
+txt = "15.78"
+
+zmienna1 = float(txt)
+zmienna2 = int(zmienna1)
+
+print(zmienna1)
+print(zmienna2)
+
+
+liczba = 31
+liczba2 = 2
+
+print(liczba + liczba2)
+print(liczba - liczba2)
+print(liczba * liczba2)
+print(liczba / liczba2)
+
+-------------------------
+
+zmienna = 16.5
+zmienna2 = 16
+
+print(zmienna > zmienna2)
+print(zmienna < zmienna2)
+print(zmienna == zmienna2)
+zmienna = int(zmienna)
+print(zmienna > zmienna2)
+print(zmienna < zmienna2)
+print(zmienna == zmienna2)
+
+
+
+-------------------------
+
+
+imie = "Jacek"
+wiek = 14
+klasa = "3a"
+
+print(imie == "Jacek" and wiek < 18)
+print(klasa == "3b" or imie == "Wojtek")
+
+
+-------------------------
+
+zmienna = 18
+
+zmienna += 2
+print(zmienna == 20)
+zmienna *= -1
+print(zmienna == -20)
+
+-------------------------
+
+#21.11.2023 Milosz Zawolik dalej sie ucze programowania w python ale dobrze mi idzie.
+#tworze zmienną lb1 o wartosci 6
+lb1 = 6
+# tworze 2 zmienna lb2 o wartosci 2
+lb2 = 2
+# tworze prina ktory upewnia sie ze reszta z dzielenie tej liczby to 0
+print(6 % 2 == 0)
+
+-------------------------
+
+a, b, c = input().split(" ")
+data = [int(a), int(b), int(c)]
+print(max(data))
+
+-------------------------
+
+
+
+
+-------------------------
+
+-------------------------
+
+-------------------------
+
+
+
+
+
